@@ -1,0 +1,342 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Code begins here */
+html,body{
+     max-width:1440px;
+     width:100%;
+     margin:0 auto;
+     font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Navigation */
+.header-top{
+     display:flex;
+     justify-content:space-between;
+     align-items:center;
+     position:fixed;
+     top: 0;
+     width:90%;
+     margin-right:4%;
+     margin-left: 4%;
+     opacity:90%;
+     font-size:1.2rem;
+     padding:20px;
+}
+.header-logo{
+     font-size:1.7rem;
+     display:flex;
+     align-items:center;
+     /* margin-left:4%; */
+     width:80px;
+     height:38px;
+}
+
+nav{
+     width:50%;
+     display:flex;
+     justify-content:space-between;
+     align-items:center;
+}
+@media screen and (max-width: 800px) {
+     nav {
+          width:70%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+     nav {
+          width:100%;
+    }
+    nav a {
+         display: none;
+    }
+    .sign-up-btn {
+         display: none;
+    }
+}
+
+nav a{
+     text-decoration:none;
+     color:#4169E1;
+}
+nav a:hover{
+     color:#7B68EE;
+     text-decoration: underline;
+}
+
+.sign-up-btn{
+     color: #4169E1;
+     border:1.3px solid #4169E1;
+     padding:10px 20px;
+     transition:0.3s;
+}
+.sign-up-btn:hover{
+     opacity:1;
+     background-color:#4169E1;
+     color:white;
+}
+
+/* Another breaker  */
+
+/* Hamburger Menu */
+@media screen and (max-width:1440px){
+     #menuToggle{
+          display:none;
+     }
+}
+
+@media screen and (max-width:800px){
+     #menuToggle{
+          display:none;
+     }
+}
+@media screen and (max-width:500px){
+body
+{
+  overflow-x: hidden; 
+}
+a{
+  transition: color 0.5s ease;
+}
+
+
+#menuToggle {
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 3px;
+  margin-bottom: 6px;
+  position: relative;
+  
+  background: #4169E1;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #4169E1;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  opacity: 1;
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 180px;
+  margin: -100px 0 0 0;
+  padding: 45px;
+  padding-top: 125px;
+  right: -100px;
+  
+  background: white;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's fade it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: scale(1.0, 1.0);
+  opacity: 1;
+}
+
+#menu li{
+     color:#4169E1;
+     padding-left:20px;
+}
+#menu li:hover{
+     background-color:#4169E1;
+     color:white;
+}
+
+}
+
+/* another breaker  */
+
+/* Hero */
+
+
+
+.hero {
+     margin-top:80px;
+     display:flex;
+     margin-left: 4%;
+     margin-right: 4%;
+}
+
+@media screen and (max-width:500px){
+    
+}
+
+.hero-text {
+     width:30%;
+}
+
+.hero-text h1 {
+     width:80%;
+     font-size: 6vw;
+}
+
+.hero-text h2 {
+     margin-top:16px;
+     font-size: 4vw;
+}
+@media screen and (max-width:500px){
+     .hero-text h1 {
+          width:100%;
+          font-size: 10vw;
+     }
+     
+     .hero-text h2 {
+          margin-top:16px;
+          font-size: 8vw;
+     }
+}
+
+.doctors {
+   width: 70%;
+}
+
+
+@media screen and (max-width:500px){
+     .doctors {
+          display:none;
+       }
+}
