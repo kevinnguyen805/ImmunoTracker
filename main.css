@@ -64,6 +64,7 @@ html,body{
 
 
 /* Navigation */
+
 .header-top{
      display:flex;
      justify-content:space-between;
@@ -71,11 +72,11 @@ html,body{
      position:fixed;
      top: 0;
      max-width:1440px;
-     width:90%;
-     /* margin-right:4%;
-     margin-left: 4%; */
-     padding:20px;
-     opacity:90%;
+     width:100%;
+     background:rgba(255,255,255,.95);
+     padding-top:20px;
+     padding-bottom:20px;
+     
      font-size:1.2rem;
 
 }
@@ -83,22 +84,19 @@ html,body{
      font-size:1.7rem;
      display:flex;
      align-items:center;
-     margin-left:4%;
+     padding-left:4%;
      width:80px;
      height:38px;
 }
 
 nav{
-     width:50%;
+     width:60%;
      display:flex;
      justify-content:space-between;
      align-items:center;
+     padding-right:5%;
 }
-@media screen and (max-width: 800px) {
-     nav {
-          width:70%;
-    }
-}
+
 
 @media screen and (max-width: 500px) {
      nav {
@@ -361,10 +359,9 @@ a{
 /* Testimonials */
 
 .testimonies {
-     
      display:flex;
-     justify-content:space-between;
-
+     justify-content:space-around;
+     padding:20px 0;
 }
 
 .testimony{
@@ -372,9 +369,40 @@ a{
      width:360px;
      height:480px;
 }
+
+/* Industy Partners */
+.product-applications{
+     background-color:#F5F5F5;
+     width:100%;
+     height:300px;
+}
+
+
+
+
+
+
+
+
 /* footer */
 .footer{
      margin-top:50px;
      height:100px;
      background-image:linear-gradient( white,#E6E6FA);
+     display:flex;
+     flex-direction:column;
+     justify-content:space-around;
+}
+.footercontent{
+     display:flex;
+     justify-content:space-evenly;
+}
+.footer a{
+     text-decoration:none;
+     color:#7B68EE;
+     font-size:1.2rem;
+}
+.footer a:hover{
+     color:#4169E1;
+     text-decoration:underline;
 }
