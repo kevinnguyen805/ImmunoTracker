@@ -1,0 +1,291 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* fonts */
+@import url('https://fonts.googleapis.com/css?family=Cabin|Raleway&display=swap');
+
+/* Code begins here */
+html,body{
+     background: #fcfcfb;
+     margin:0 auto;
+     font-family: 'Raleway', sans-serif;
+     color: #2e2f38;
+}
+
+.site-container {
+     max-width:1440px;
+     width:100%;
+     margin:0 auto;
+     background: #fcfcfb
+
+}
+
+
+/* Navigation */
+
+.header-top {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     position: fixed;
+     top: 0;
+     max-width: 1440px;
+     width: 100%;
+     opacity: 0.97;
+     background: #fcfcfb;
+     padding-top: 20px;
+     padding-bottom: 20px;
+     font-size: 1.2rem;
+     z-index: 99999;
+   }
+   .header-logo {
+     font-size: 1.7rem;
+     display: flex;
+     align-items: center;
+     justify-content: flex-start;
+     padding-left: 1rem;
+     width: 15%;
+     height: 38px;
+   }
+   .logo {
+     height: 60px;
+     opacity: 0.8;
+   }
+   nav {
+     width: 60%;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     padding-left: 4%;
+     padding-right: 4%;
+   }
+   #noUnderline{
+        text-decoration:none;
+   }
+   #logoAnchor{
+     text-decoration:none;
+     color:#2e2f38;
+}
+
+
+@media screen and (max-width: 500px) {
+     nav {
+          width:100%;
+    }
+    nav a {
+         display: none;
+    }
+    .sign-up-btn {
+         display: none;
+    }
+}
+
+nav a{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     text-decoration:none;
+     color:#5563fa;
+     transition: .3s cubic-bezier(0.2,0.8,0.2,1);
+}
+nav a:hover{
+     color:#2e2f38;
+     text-decoration: underline;
+}
+
+.sign-up-btn{
+     opacity:1;
+     font-weight: bold;
+     display:flex;
+     align-items:center;
+     justify-content:center;
+     color: #5563fa;
+     border:1.3px solid #5563fa;
+     background: #fcfcfb;
+     font-weight: bold;
+     font-size: 1.1rem;
+     border-radius: 5px;
+     padding:10px 20px;
+     transition: .4s cubic-bezier(0.2,0.8,0.2,1);
+}
+.sign-up-btn:hover{
+     opacity:1;
+     background-color:#5563fa;
+     color:white;
+     text-decoration: none;
+     box-shadow: 0 10px 20px rgba(0,0 ,0, .25);
+     transform: translateY(-3px);
+}
+
+
+/* Dropdown menu */
+@media screen and (max-width:6000px){
+     .dropdownContainer{
+          display:none;
+     }
+     .dropdown-content a{
+          display:none;
+     }
+}
+@media screen and (max-width:1440px){
+     .dropdownContainer{
+          display:none;
+     }
+     .dropdown-content a{
+          display:none;
+     }
+}
+@media screen and (max-width:800px){
+     .dropdownContainer{
+          display:none;
+     }
+     .dropdown-content a{
+          display:none;
+     }
+}
+@media screen and (max-width:500px){
+    .header-top nav {
+         display:none;
+    }
+    
+     .dropdownContainer{
+          display:flex;
+     }
+.dropbtn {
+  background-color:#fcfcfb;
+  color: #5563fa;
+  padding: 9px 20px;
+  font-size: 16px;
+  border: 1.3px solid #5563fa;
+  border-radius:3px;
+  margin-right:2rem;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #2e2f38;
+  padding: 13px 13px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+     color:#fcfcfb;
+     background-color: #5563fa;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+     color:#fcfcfb;
+  background-color: #5563fa;
+}
+
+}
+
+/* Policy Section */
+
+.policy {
+    margin-top:104px;
+    margin-left:10%;
+    margin-right:10%;
+    margin-bottom:8rem;
+}
+
+.policy h1 {
+    font-size:2rem;
+}
+
+.policy h2 {
+    font-size: 1.5rem;
+    margin-top:1.5rem;
+    margin-bottom:1rem;
+}
+
+.policy h3 {
+    font-size: 1.2rem;
+    margin-top:1.5rem;
+    margin-bottom:1rem;
+}
+
+/* footer */
+.footer{
+    margin-top:10rem;
+    height:80px;
+    display:flex;
+    justify-content:center;
+}
+.footercontent{
+    display:flex;
+    width:60%;
+    justify-content:space-evenly;
+}
+.footer a{
+    text-decoration:none;
+    color:#2e2f38;
+    font-size:.8rem;
+}
+.footer a:hover{
+    
+    text-decoration:underline;
+}
